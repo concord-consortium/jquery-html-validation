@@ -1,7 +1,11 @@
 TODO
 ========
 
-* Return true or false if a given block is parseable
-* Select level of parseability (browser, jQuery, strictness?)
-* Error message on selector which contains the snippet (for form validation on the fly?)
+* Wrap input in a `<div></div>` to ensure one container
+* Replace previous errors when updating `#errors`
+* Don't update `#errors` if there are no errors
+* Parameterize errors container
+
+* Select level of parseability (browser, jQuery, strictness? Is this possible?)
+* Call `validateHtml()` from onChange or something like that
 * As method for jquery-validate?
