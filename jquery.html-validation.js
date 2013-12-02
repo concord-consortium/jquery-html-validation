@@ -3,7 +3,7 @@
 
 /*!
 	jQuery HTML validation plugin
-	(c) 2013 Parker Morse - http://pjmorse.github.io
+	(c) 2013 Parker Morse for Concord Consortium - http://concord.org
 */
 
 (function ( $ ) {
@@ -21,14 +21,17 @@
         return xmlDoc;
     };
 
-    // TODO: Wrap input in a <div></div> to ensure one container
-    // TODO: Replace previous errors when updating #errors
-    // TODO: What if there are no errors?
-    // TODO: Parameterize errors container
     $.fn.validateHtml = function () {
         return this.filter('textarea').each( function () {
-            var errors = validation( $( this ).val() );
-            $('#errors').append( errors.children );
+            var errors = validation( '<div>' + $( this ).val() + '</div>' );
+            if ($(errors).find('parsererror').length > 0) {
+                // TODO: Customize this
+                $('#errors').html( '<p style="padding: 3px; background-color: #ffcccc; border: 1px solid #ff0000; font-weight: bold; color: #bb3333;">There were parse errors in the HTML; please correct them before saving.</p>');
+                $('#errors').append( '<div class="error-detail" style="display: none;"></div>');
+                $('#errors .error-detail').append( errors.children );
+            } else {
+                $('#errors').html('');
+            }
         });
     };
 } ( jQuery ));
