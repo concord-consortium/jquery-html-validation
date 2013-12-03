@@ -1,7 +1,11 @@
 TODO
 ========
 
-* Parameterize errors container
-* Select level of parseability (browser, jQuery, strictness? Is this possible?)
-* Call `validateHtml()` from onChange or something like that
+* Parameterize level of parseability (browser, jQuery, strictness? Is this possible?)
+* Test! (Configure Travis?)
+
+* Register plugin
+* Bower?
+* Wrapped in a gem for Rails
+
 * As method for jquery-validate?
