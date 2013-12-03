@@ -6,5 +6,6 @@ TODO
 
 * Register plugin
 * Bower?
+* Wrapped in a gem for Rails
 
 * As method for jquery-validate?
