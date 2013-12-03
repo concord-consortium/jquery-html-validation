@@ -3,6 +3,10 @@ TODO
 
 * Parameterize errors container
 * Parameterize level of parseability (browser, jQuery, strictness? Is this possible?)
-* Call `validateHtml()` from onChange or something like that
+* Update with lessons from boilerplate
+* Test! (Configure Travis?)
+
 * Register plugin
+* Bower?
+
 * As method for jquery-validate?
