@@ -22,7 +22,7 @@
     };
 
     $.fn.validateHtml = function () {
-        return this.filter('textarea').each( function () {
+        return $( this ).each( function () {
             var errors = validation( '<div>' + $( this ).val() + '</div>' );
             if ($(errors).find('parsererror').length > 0) {
                 // TODO: Customize this
@@ -35,3 +35,7 @@
         });
     };
 } ( jQuery ));
+
+$(document).ready(function () {
+    $('textarea.validate-html').on('change', $(this).validateHtml);
+});
